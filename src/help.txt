@@ -1,0 +1,46 @@
+${THIS_NAME} [-fbFB C]
+  ANSI Escape Codeにおける3bitカラーコードを出力する。
+auguments:
+   1     \e[3C  前景色を指定した色にする。Standard Color
+   2     \e[4C  背景色を指定した色にする。Standard Color
+options:
+  -f C   \e[3C  前景色を指定した色にする。Standard Color
+  -b C   \e[4C  背景色を指定した色にする。Standard Color
+  -F C   \e[9C  前景色を指定した色にする。High Intensity Color
+  -B C   \e[10C 背景色を指定した色にする。High Intensity Color
+colors:
+  0|k|K|black    C=0
+  1|r|R|red      C=1
+  2|g|G|green    C=2
+  3|y|Y|yellow   C=3
+  4|b|B|blue     C=4
+  5|m|M|magenta  C=5
+  6|c|C|cyan     C=6
+  7|w|W|white    C=7
+examples:
+  ${THIS_NAME} 1
+  ${THIS_NAME} r
+  ${THIS_NAME} red
+  ${THIS_NAME} -f 1
+  ${THIS_NAME} -f r
+  ${THIS_NAME} -f red
+  ${THIS_NAME} -F 1
+  ${THIS_NAME} -F r
+  ${THIS_NAME} -F red
+  ${THIS_NAME} -b 1
+  ${THIS_NAME} -b r
+  ${THIS_NAME} -b red
+  ${THIS_NAME} -B 1
+  ${THIS_NAME} -B r
+  ${THIS_NAME} -B red
+  ${THIS_NAME} 1 3
+  ${THIS_NAME} -f 1 -b 3
+  ${THIS_NAME} -f r -b y
+  ${THIS_NAME} -f red -b yellow
+  ${THIS_NAME} -F 1 -B 3
+  ${THIS_NAME} -F r -B y
+  ${THIS_NAME} -F red -B yellow
+  ${THIS_NAME} -F1 -B3
+  ${THIS_NAME} -Fr -By
+  ${THIS_NAME} -Fred -Byellow
+
